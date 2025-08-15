@@ -36,4 +36,8 @@ select deptname,empname from departments join employees on employees.deptid=depa
 /*find number of employees in each dept*/
 select deptname,count(empname) from departments join employees on employees.deptid=departments.deptid group by deptname;
 /* display all employees icluding those without a department*/
-select * from employees left join departments on employees.deptid = departments.deptid;
+select empid, empname, deptid,salary,hiredate,deptname
+from employees
+left join departments
+on employees.deptid = departments.deptid;
+
