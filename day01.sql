@@ -1,5 +1,5 @@
-create database day2;
-use day2;
+create database day1;
+use day1;
 CREATE TABLE departments (
     deptid INT PRIMARY KEY,
     deptname VARCHAR(10)
@@ -26,9 +26,9 @@ VALUES
 select * from employees;
 
 /*display all records from the employee table*/
-select * from employee;
+select * from employees;
 /* display only empname and salary of all employees*/
-select empname,salary from employee;
+select empname,salary from employees;
 /*find all employees who belong to it department*/
 SELECT * from employees JOIN departments ON employees.deptid = departments.deptid WHERE departments.deptname = 'it';
 /*list employees whose salary greater than 50000*/
